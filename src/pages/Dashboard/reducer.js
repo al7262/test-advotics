@@ -1,27 +1,25 @@
 import { LOADING, DATA_FETCHED } from './constants';
-import ProductImg from '../../assets/product2.webp';
-import { sortByDescending } from '../../utils/format';
 
-const bestSelling = sortByDescending([0, 1, 2, 3, 4].map((n) => ({
-  name: `Produk ${n}`,
-  id: n,
-  image: ProductImg,
-  price: 100000,
-  quantity: Math.floor(Math.random() * 100),
-})), 'quantity');
+// const bestSelling = sortByDescending([...Array(5).keys()].map((n) => ({
+//   name: `Produk ${n}`,
+//   id: n,
+//   image: ProductImg,
+//   price: 100000,
+//   quantity: Math.floor(Math.random() * 100),
+// })), 'quantity');
 
-const topCompetitor = [0, 1, 2, 3, 4].map((n) => ({
-  name: `Produk ${n}`,
-  id: n,
-  image: ProductImg,
-  price: 100000,
-  quantity: Math.floor(Math.random() * 100),
-}));
+// const topCompetitor = [...Array(5).keys()].map((n) => ({
+//   name: `Produk ${n}`,
+//   id: n,
+//   image: ProductImg,
+//   price: 100000,
+//   quantity: Math.floor(Math.random() * 100),
+// }));
 
 const initialState = {
   averagePurchase: [],
-  bestSelling,
-  topCompetitor,
+  bestSelling: [],
+  topCompetitor: [],
   isLoading: false,
 };
 

@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import PeriodSelection from '../../components/elements/PeriodSelection';
 import Card from '../../components/elements/Card';
 import Chart from '../../components/elements/Chart';
@@ -9,15 +9,18 @@ import HelpIcon from '../../assets/help.png';
 import DownArrow from '../../assets/down-arrow.svg';
 import CartIcon from '../../assets/cart.svg';
 import { currency, thousandSeparator } from '../../utils/format';
+import { fetchData } from './action';
 import styles from './index.css';
 
 export default function Dashboard() {
-  const { bestSelling, topCompetitor } = useSelector((s) => s.dashboard);
+  const dispatch = useDispatch();
+  const { bestSelling, topCompetitor, averagePurchase } = useSelector((s) => s.dashboard);
+  const onChangeFilter = (payload) => dispatch(fetchData(payload));
   return (
     <section className={styles.root}>
       <header className={styles.header}>
         <h1>Dashboard</h1>
-        <PeriodSelection />
+        <PeriodSelection onChange={onChangeFilter} />
       </header>
       <div className={styles.snackbar}>
         <h2>Market Insight</h2>
@@ -36,7 +39,7 @@ export default function Dashboard() {
           <img src={CartIcon} alt="cart-icon-advotics" />
         </Card>
         <Card className={styles.chart} title="Average Purchase Value" fixed>
-          <Chart />
+          <Chart data={averagePurchase} />
         </Card>
         <Card className={styles.chart} title="Best Selling SKU" fixed>
           <ProductList data={bestSelling} />

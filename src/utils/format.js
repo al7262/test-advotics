@@ -4,6 +4,8 @@ export function thousandSeparator(value) {
 
 export const currency = (value) => value && `Rp ${thousandSeparator(value)}`;
 
+export const roundNumber = (value) => Math.round(value * 100) / 100;
+
 export function sortByAlphabet(data, field) {
   return data.sort((a, b) => {
     if (a[field].toLowerCase() < b[field].toLowerCase()) {
