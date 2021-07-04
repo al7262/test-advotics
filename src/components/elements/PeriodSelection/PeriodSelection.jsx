@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 import calendar from '../../../assets/calendar.png';
 import usePopper from '../../../hooks/usePopper';
 import Button from '../Button';
@@ -10,14 +11,16 @@ import Popper from '../Popper';
 import CalendarDaily from '../CalendarDaily';
 import styles from './index.css';
 
-export default function PeriodSelection() {
-  const [startDate, setStartDate] = useState(moment().add(-7, 'days'));
-  const [endDate, setEndDate] = useState(moment().add(-1, 'days'));
+export default function PeriodSelection({ onChange }) {
+  const [startDate, setStartDate] = useState(moment().subtract(7, 'days'));
+  const [endDate, setEndDate] = useState(moment().subtract(1, 'days'));
   const combinedDate = `${startDate.format('DD MMMM YYYY')} - ${endDate.format('DD MMMM YYYY')}`;
   const [date, setDate] = useState(combinedDate);
   const [open, setOpen] = useState(false);
   const [chosen, setChosen] = useState('Last 7 days');
-  const disableAfterEndDate = moment(startDate).add(6, 'M').isAfter(moment()) ? moment().add(-1, 'd') : moment(startDate).add(6, 'M');
+  const yesterday = moment().subtract(1, 'd');
+  const after6Months = moment(startDate).add(6, 'M');
+  const disableAfterEndDate = after6Months.isAfter(yesterday) ? yesterday : after6Months;
 
   const onClick = () => setOpen(!open);
   const onApply = () => {
@@ -26,8 +29,8 @@ export default function PeriodSelection() {
   };
 
   const updateDate = (choose, start, end) => {
-    setStartDate(moment().add(-start, 'days'));
-    setEndDate(moment().add(-end, 'days'));
+    setStartDate(moment().subtract(start, 'days'));
+    setEndDate(moment().subtract(end, 'days'));
     setChosen(choose);
   };
 
@@ -65,6 +68,11 @@ export default function PeriodSelection() {
     styles.root,
     open && styles.open,
   ].filter(Boolean).join(' ');
+
+  useEffect(() => {
+    const payload = { startDate, endDate };
+    onChange(payload);
+  }, [date]);
 
   return (
     <div className={rootStyles}>
@@ -108,7 +116,7 @@ export default function PeriodSelection() {
           onSelect={(v) => { setStartDate(moment(v)); setChosen(''); }}
           date={startDate}
           disabledAfter={endDate}
-          disabledBefore={moment(endDate).add(-6, 'M')}
+          disabledBefore={moment(endDate).subtract(6, 'M')}
         />
         <CalendarDaily
           onSelect={(v) => { setEndDate(moment(v)); setChosen(''); }}
@@ -120,3 +128,11 @@ export default function PeriodSelection() {
     </div>
   );
 }
+
+PeriodSelection.defaultProps = {
+  onChange: () => {},
+};
+
+PeriodSelection.propTypes = {
+  onChange: PropTypes.func,
+};
