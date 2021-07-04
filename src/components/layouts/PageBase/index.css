@@ -1,0 +1,53 @@
+.aside {
+    position: fixed;
+    width: 4.5em;
+    height: 100vh;
+    padding-top: 4em;
+    background-color: var(--white-color);
+}
+
+.menu {
+    width: 100%;
+    padding: 1.5em;
+}
+
+.menu > span {
+    height: .25em;
+    width: 100%;
+    border-radius: .5em;
+    background-color: var(--black-color-4);
+    margin-bottom: .375em;
+    display: block;
+}
+
+.menu > span:last-child {
+    width: 60%;
+    margin-bottom: 0;
+}
+
+.nav-item {
+    display: block;
+    width: 100%;
+    padding: .875em 1.5em;
+}
+
+.nav-item > figure {
+    width: 1.5em;
+    height: 1.5em;
+    background-color: var(--white-color);
+    border-radius: .25em;
+    padding: .125em;
+}
+
+.nav-item > figure > image {
+    width: 100%;
+}
+
+.nav-item.active {
+    background-color: var(--black-color-4);
+}
+
+.main {
+    padding: 5.75em 1em 1em 5.75em;
+    height: 100vh;
+}

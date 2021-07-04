@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/components/layout/PageBase render 1`] = `
+<React.Fragment>
+  <Header />
+  <aside>
+    <div>
+      <span />
+      <span />
+      <span />
+    </div>
+    <nav>
+      <NavSider
+        data={
+          Object {
+            "icon": Object {
+              "process": [Function],
+            },
+            "name": "Dashboard",
+            "to": "/",
+          }
+        }
+      />
+    </nav>
+  </aside>
+  <main />
+</React.Fragment>
+`;

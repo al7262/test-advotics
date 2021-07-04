@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/components/elements/Card render 1`] = `
+<div
+  className=""
+>
+  <header>
+    <h3
+      title=""
+    >
+      
+    </h3>
+    <img
+      alt="more-icon-advotics"
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+    />
+  </header>
+  <main>
+    
+  </main>
+</div>
+`;

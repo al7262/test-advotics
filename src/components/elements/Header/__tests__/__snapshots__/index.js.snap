@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/components/elements/Header render 1`] = `
+<header>
+  <figure>
+    <img
+      alt="advotics"
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+    />
+  </figure>
+  <figcaption>
+    <span>
+      powered by
+    </span>
+    <img
+      alt="advotics"
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+    />
+  </figcaption>
+  <div>
+    <h6>
+      Username
+    </h6>
+    <small>
+      Company Name
+    </small>
+    <img
+      alt="profile-company"
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+    />
+    <img
+      alt="logout-advotics"
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+    />
+  </div>
+</header>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/components/elements/Popper render 1`] = `
+<section
+  className=""
+  onClick={[Function]}
+  style={Object {}}
+/>
+`;

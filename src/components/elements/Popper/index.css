@@ -1,0 +1,13 @@
+.root {
+  background-color: var(--white-color);
+  border-radius: 0.25rem;
+  filter: var(--drop-shadow-l);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.popper-closed {
+  display: none !important;
+}

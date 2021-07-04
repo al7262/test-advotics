@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/components/elements/PeriodSelection render 1`] = `
+<div
+  className=""
+>
+  <div
+    onClick={[Function]}
+  >
+    <img
+      alt="calendar"
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+    />
+    <h5>
+      Period
+    </h5>
+    <h5>
+      27 June 2021 - 03 July 2021
+    </h5>
+    <Button
+      className=""
+      color="primary"
+      disabled={false}
+      fixed={false}
+      icon={null}
+      isLoading={false}
+      onClick={[Function]}
+      rounded={false}
+      size="medium"
+      to=""
+      type="button"
+      variant="link"
+    >
+      <span />
+    </Button>
+  </div>
+  <Popper
+    buttonRef={
+      Object {
+        "current": Object {},
+      }
+    }
+    className=""
+    onClose={[Function]}
+    open={false}
+    popperRef={null}
+    style={Object {}}
+  >
+    <section>
+      <Button
+        className=" "
+        color="primary"
+        disabled={true}
+        fixed={false}
+        icon={null}
+        isLoading={false}
+        onClick={[Function]}
+        rounded={false}
+        size="medium"
+        to=""
+        type="button"
+        variant="link"
+      >
+        <p>
+          Today
+        </p>
+      </Button>
+      <Button
+        className=" "
+        color="primary"
+        disabled={false}
+        fixed={false}
+        icon={null}
+        isLoading={false}
+        onClick={[Function]}
+        rounded={false}
+        size="medium"
+        to=""
+        type="button"
+        variant="link"
+      >
+        <p>
+          Yesterday
+        </p>
+      </Button>
+      <Button
+        className=" "
+        color="primary"
+        disabled={false}
+        fixed={false}
+        icon={null}
+        isLoading={false}
+        onClick={[Function]}
+        rounded={false}
+        size="medium"
+        to=""
+        type="button"
+        variant="link"
+      >
+        <p>
+          Last 7 days
+        </p>
+      </Button>
+      <Button
+        className=" "
+        color="primary"
+        disabled={false}
+        fixed={false}
+        icon={null}
+        isLoading={false}
+        onClick={[Function]}
+        rounded={false}
+        size="medium"
+        to=""
+        type="button"
+        variant="link"
+      >
+        <p>
+          Last 30 days
+        </p>
+      </Button>
+      <Button
+        className=" "
+        color="primary"
+        disabled={false}
+        fixed={false}
+        icon={null}
+        isLoading={false}
+        onClick={[Function]}
+        rounded={false}
+        size="medium"
+        to=""
+        type="button"
+        variant="link"
+      >
+        <p>
+          This Month
+        </p>
+      </Button>
+      <Button
+        className=""
+        color="primary"
+        disabled={false}
+        fixed={true}
+        icon={null}
+        isLoading={false}
+        onClick={[Function]}
+        rounded={false}
+        size="small"
+        to=""
+        type="button"
+        variant="filled"
+      >
+        <p>
+          Apply
+        </p>
+      </Button>
+    </section>
+    <CalendarDaily
+      date={"2021-06-27T07:44:49.689Z"}
+      disabledAfter={"2021-07-03T07:44:49.691Z"}
+      disabledBefore={"2021-01-03T07:44:49.691Z"}
+      name=""
+      onSelect={[Function]}
+    />
+    <CalendarDaily
+      date={"2021-07-03T07:44:49.691Z"}
+      disabledAfter={"2021-07-03T07:44:49.693Z"}
+      disabledBefore={"2021-06-27T07:44:49.689Z"}
+      name=""
+      onSelect={[Function]}
+    />
+  </Popper>
+</div>
+`;

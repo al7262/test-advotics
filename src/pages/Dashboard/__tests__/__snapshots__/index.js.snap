@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/pages/Dashboard render 1`] = `
+<section>
+  <header>
+    <h1>
+      Dashboard
+    </h1>
+    <PeriodSelection />
+  </header>
+  <div>
+    <h2>
+      Market Insight
+    </h2>
+    <img
+      alt="help-icon-advotics"
+      src={
+        Object {
+          "process": [Function],
+        }
+      }
+    />
+    <h6>
+      Click Here for Help
+    </h6>
+    <span />
+  </div>
+  <article>
+    <Card
+      className=""
+      fixed={false}
+      size="small"
+      title="Sales Turnover"
+    >
+      <b>
+        Rp 3,600,000
+      </b>
+      <small>
+        <img
+          alt="down-arrow-advotics"
+          src={
+            Object {
+              "process": [Function],
+            }
+          }
+        />
+        <b>
+          13.8% 
+        </b>
+        last period in products sold
+      </small>
+      <img
+        alt="cart-icon-advotics"
+        src={
+          Object {
+            "process": [Function],
+          }
+        }
+      />
+    </Card>
+    <Card
+      className=""
+      fixed={true}
+      size="normal"
+      title="Average Purchase Value"
+    >
+      <Chart />
+    </Card>
+    <Card
+      className=""
+      fixed={true}
+      size="normal"
+      title="Best Selling SKU"
+    >
+      <ProductList
+        data={Array []}
+      />
+    </Card>
+    <Card
+      className=""
+      fixed={true}
+      size="normal"
+      title="Top Competitor SKU"
+    >
+      <ProductList
+        data={Array []}
+      />
+    </Card>
+  </article>
+</section>
+`;

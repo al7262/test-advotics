@@ -1,0 +1,111 @@
+.root {
+    height: 3rem;
+    margin-left: auto;
+    position: relative;
+}
+
+.summary {
+    border: 0;
+    height: 100%;
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .75rem 1rem;
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 3px #00000029;
+    border-radius: 2px;
+    transition: ease-in-out .5s;
+}
+
+.open > .summary {
+    width: 37.5rem;
+}
+
+.summary > img {
+    height: 100%;
+}
+
+.summary > h5 {
+    color: var(--black-color-2);
+    transition: ease-in-out .5s;
+}
+
+.summary > h5:first-of-type {
+    color: var(--black-color-3);
+}
+
+.summary > h5:last-of-type {
+    flex: 1;
+}
+
+.summary > button {
+    all: unset;
+    display: flex;
+    padding-bottom: .125rem;
+}
+
+.summary > button > span {
+    border: solid var(--black-color-2);
+    border-width: 0 .125rem .125rem 0;
+    display: inline-block;
+    padding: .25rem;
+    transform: rotate(45deg);
+    transition: ease-in-out .5s;
+}
+
+.open > .summary > button > span {
+    transform: rotate(-135deg);
+}
+
+.popper {
+    top: 3rem;
+    right: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem;
+    box-shadow: 0px 2px 3px #00000029;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.choice {
+    padding-right: 1rem;
+    border-right: .0625rem solid var(--black-color-4);
+}
+
+.choice > .choice-item {
+    font-weight: 400;
+    color: var(--black-color-3) !important;
+    padding: .75rem 0;
+    border-bottom: .0625rem solid var(--black-color-4);
+    width: 100%;
+    justify-content: left;
+}
+
+.choice > .choice-item:hover > p {
+    color: var(--primary-color);
+}
+
+.choice > .choice-item:disabled > p {
+    color: var(--black-color-5);
+}
+
+.choice > .choice-item.active > p {
+    color: var(--primary-color-dark);
+    font-weight: 600;
+}
+
+.choice > .choice-item:first-child {
+    padding-top: 0;
+}
+
+.choice > .choice-item:last-child {
+    border-bottom: 0;
+}
+
+

@@ -1,0 +1,222 @@
+.root {
+  border: none;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  font-weight: 600;
+  transition: opacity 0.25s;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-itrems: center;
+  position: relative;
+}
+
+.root > svg {
+  max-height: 1rem;
+  margin-right: .5rem;
+}
+
+.fixed {
+  width: 100%;
+}
+
+.mini, .small {
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+}
+
+.mini {
+  padding: 0.375rem 1rem; 
+  height: 1.625rem;
+}
+
+.small {
+  padding: 0.5rem 1.5rem; 
+  min-height: 2rem;
+}
+
+.medium {
+  padding: 0.75rem 1.5rem; 
+  min-height: 2.5rem;
+}
+
+.large {
+  padding: 1rem 1.5rem;
+  min-height: 3rem;
+}
+
+.filled, .circle, .rounded {
+  color: var(--white-color);
+}
+
+.filled > svg, .circle > svg, .rounded > svg {
+  fill: var(--white-color);
+}
+
+.outline {
+  background-color: transparent;
+}
+
+.rounded {
+  border-radius: 1.5rem;
+}
+
+.circle {
+  height: 3.5rem;
+  width: 3.5rem;
+  min-width: auto;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.circle.mini {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.filled.primary, .circle.primary {
+  background-color: var(--primary-color);
+}
+
+.filled.secondary, .circle.secondary {
+  background-color: var(--secondary-color);
+}
+
+.filled.red, .circle.red {
+  background-color: var(--red-color);
+}
+
+.filled.blue, .circle.blue {
+  background-color: var(--blue-color);
+}
+
+.filled:hover, .circle:hover, .outline:hover {
+  filter: brightness(1.1);
+}
+
+.filled:active, .circle:active, .outline:active {
+  filter: brightness(0.9)
+}
+
+.ghost {
+  background-color: var(--black-color-6);
+}
+
+.ghost.secondary, .link.secondary, .outline.secondary {
+  color: var(--secondary-color);
+}
+
+.ghost.primary, .link.primary, .outline.primary {
+  color: var(--primary-color);
+}
+
+.ghost.red, .link.red, .outline.red {
+  color: var(--red-color);
+}
+
+.ghost.blue, .link.blue, .outline.blue {
+  color: var(--blue-color);
+}
+
+.ghost.primary > svg, .outline.primary > svg {
+  fill: var(--primary-color);
+}
+
+.ghost.secondary > svg, .outline.secondary > svg {
+  fill: var(--secondary-color);
+}
+
+.ghost.red > svg, .outline.red > svg {
+  fill: var(--red-color);
+}
+
+.ghost.blue > svg, .outline.blue > svg {
+  fill: var(--blue-color);
+}
+
+.ghost:hover {
+  background-color: var(--black-color-5);
+}
+
+.ghost:hover, .link:hover {
+  filter: brightness(1.06)
+}
+
+.ghost:active {
+  background-color: var(--white-color);
+}
+
+.ghost:active, .link:active {
+  filter: brightness(0.95)
+}
+
+.outline.primary {
+  border: .125rem solid var(--primary-color);
+}
+
+.outline.secondary {
+  border: .125rem solid var(--secondary-color);
+}
+
+.outline.red {
+  border: .125rem solid var(--red-color);
+}
+
+.outline.blue {
+  border: .125rem solid var(--blue-color);
+}
+
+.link {
+  padding: 0;
+  max-height: 100%;
+  min-height: 0;
+  background-color: transparent;
+}
+
+.root a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.root:disabled {
+  color: var(--black-color-3) !important;
+  cursor: default;
+  filter: unset;
+}
+
+.root:disabled > svg {
+  fill: var(--black-color-3);
+}
+
+.filled:disabled {
+  background-color: var(--black-color-5) !important;
+}
+
+.ghost:disabled {
+  background-color: var(--black-color-6) !important;
+}
+
+.circle:disabled {
+  color: var(--white-color);
+  background-color: var(--black-color-4) !important;
+}
+
+.outline:disabled {
+  border: .125rem solid var(--black-color-3) !important;
+}
+
+.filled.loading.primary {
+  background-color: var(--primary-color-dark) !important;
+}
+
+.filled.loading.secondary {
+  background-color: var(--secondary-color-dark) !important;
+}
+
+.loading {
+  padding: 0 1.5rem; 
+}

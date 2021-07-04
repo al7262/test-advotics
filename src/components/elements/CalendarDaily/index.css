@@ -1,0 +1,113 @@
+.root {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+}
+
+.root > label {
+  grid-column: 1 / span 7;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.root > b {
+  grid-column: 2 / span 5;
+  font-size: .875rem;
+}
+
+.root > p {
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin: .5rem;
+  color: var(--black-color-3)
+}
+
+.root > span {
+  color: var(--black-color-4);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  width: 1rem;
+  text-align: center;
+  margin: .375rem;
+}
+
+.root > .horizontal {
+  grid-column: 1 / span 7;
+  width: 100%;
+  height: .0625rem;
+  background-color: var(--black-color-4);
+  margin: 0;
+}
+
+.root > button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.75rem;
+  height: 1.25rem;
+  margin: .25rem;
+  width: 1.25rem;
+  position: relative;
+}
+
+.root > button:disabled {
+  color: var(--primary-color);
+  cursor: default;
+  font-weight: 700;
+}
+
+.root > button:disabled::after {
+  content: "";
+  background-color: var(--primary-color);
+  border: .0625rem solid var(--primary-color-dark);
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: -.125rem;
+  left: -.125rem;
+  opacity: .25;
+}
+
+.root > button:hover:not(:disabled) {
+  color: var(--primary-color);
+}
+
+.root > button:first-of-type {
+  grid-column: 1;
+  justify-self: self-start;
+  display: flex;
+  padding-top: .375rem;
+  padding-left: .5rem;
+}
+
+.root > button:nth-of-type(2) {
+  grid-column: 7;
+  justify-self: self-end;
+  display: flex;
+  padding-top: .375rem;
+  padding-left: .25rem;
+}
+
+.root > button:first-of-type > img,
+.root > button:nth-of-type(2) > img {
+  filter: brightness(0.3);
+}
+
+.arrow-left {
+  border: solid var(--black-color-2);
+  border-width: 0 .125rem .125rem 0;
+  display: inline-block;
+  padding: .2rem;
+  transform: rotate(135deg);
+}
+
+.arrow-right {
+  border: solid var(--black-color-2);
+  border-width: 0 .125rem .125rem 0;
+  display: inline-block;
+  padding: .2rem;
+  transform: rotate(-45deg);
+}
