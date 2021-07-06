@@ -2,11 +2,11 @@
 - Clone project
 - Run `npm install`
 - Run `npm start`
-- Open `localhost:4000` in browser
+- Open `localhost:8080` in browser
 
 # Development
 - Run `npm start`
-- Open `localhost:4000` in browser
+- Open `localhost:8080` in browser
 
 # Testing
 - Run `npm test`
