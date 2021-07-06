@@ -56,7 +56,7 @@ export default function PeriodSelection({ onChange }) {
       label: 'This Month',
       action: () => {
         setStartDate(moment().startOf('month'));
-        setEndDate(moment());
+        setEndDate(moment().subtract(1, 'days'));
         setChosen('This Month');
       },
     },
